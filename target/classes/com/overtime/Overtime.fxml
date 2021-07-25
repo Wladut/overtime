@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="919.0" style="-fx-background-color: #F5F1F0; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.overtime.Overtime">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="917.0">
+               <children>
+                  <ImageView fx:id="sendEmailToggle" fitHeight="30.0" fitWidth="39.0" onMouseClicked="#activateRegisterTime" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/not_send_email.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="tray" fitHeight="30.0" fitWidth="39.0" onMouseClicked="#tray" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/tray.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minimize" fitHeight="24.0" fitWidth="30.0" onMouseClicked="#resize" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/minimize.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="exit" fitHeight="26.0" fitWidth="35.0" onMouseClicked="#exit" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/exit.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" right="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="507.0">
+                     <children>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="icon" fitHeight="38.0" fitWidth="32.0" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/Time.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="labelOvertime" fontSmoothingType="LCD" onMouseEntered="#setEffect" onMouseExited="#setEffect" strokeType="OUTSIDE" strokeWidth="0.0" text="Overtime tracking">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Region prefHeight="100.0" prefWidth="312.0" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="531.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="417.0">
+                           <children>
+                              <ImageView fx:id="imageContinental" blendMode="DARKEN" fitHeight="64.0" fitWidth="426.0" onMouseEntered="#setEffect" onMouseExited="#setEffect" preserveRatio="true">
+                                 <effect>
+                                    <SepiaTone level="0.01" />
+                                 </effect>
+                                 <image>
+                                    <Image url="@../resources/ContinentalBlack.JPG" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="radioButton" accessibleRole="BUTTON" fitHeight="32.0" fitWidth="42.0" onMouseClicked="#nightMode" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/night.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="40.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <HBox fx:id="hBox" prefHeight="598.0" prefWidth="305.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="foldersTreeView" editable="true" onKeyPressed="#selectedTxtFile" onMouseClicked="#selectedTxtFile" onMouseEntered="#setEffect" onMouseExited="#setEffect" prefHeight="598.0" prefWidth="221.0" showRoot="false">
+               <HBox.margin>
+                  <Insets bottom="40.0" left="40.0" />
+               </HBox.margin>
+            </TreeView>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <TextArea fx:id="notepadText" editable="false" onMouseEntered="#setEffect" onMouseExited="#setEffect" prefHeight="475.0" prefWidth="572.0" wrapText="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" right="40.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
+   <bottom>
+      <Text fx:id="dev" onMouseEntered="#setEffect" onMouseExited="#setEffect" strokeType="OUTSIDE" strokeWidth="0.0" text="vladut.2.vrinceanu@continental-corporation.com" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="40.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+   </bottom>
+</BorderPane>
