@@ -1,0 +1,12 @@
+.tree-cell {
+    -fx-background-color:#23222E; // Default color
+    -fx-text-fill: white;
+}
+
+.tree-view:focused .tree-cell:filled:selected {
+    -fx-background-color:orange; // Focused color
+}
+
+.tree-cell:filled:selected{
+    -fx-background-color:orange; // Unfocused color
+}
