@@ -84,12 +84,12 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="417.0">
                            <children>
-                              <ImageView fx:id="imageContinental" blendMode="DARKEN" fitHeight="64.0" fitWidth="426.0" onMouseEntered="#setEffect" onMouseExited="#setEffect" preserveRatio="true">
+                              <ImageView fx:id="imageContinental" blendMode="DARKEN" fitHeight="85.0" fitWidth="300.0" onMouseEntered="#setEffect" onMouseExited="#setEffect" preserveRatio="true">
                                  <effect>
                                     <SepiaTone level="0.01" />
                                  </effect>
                                  <image>
-                                    <Image url="@../resources/ContinentalBlack.JPG" />
+                                    <Image url="@../resources/overtimeblack.PNG" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="radioButton" accessibleRole="BUTTON" fitHeight="32.0" fitWidth="42.0" onMouseClicked="#nightMode" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
@@ -134,7 +134,7 @@
       </TextArea>
    </center>
    <bottom>
-      <Text fx:id="dev" onMouseEntered="#setEffect" onMouseExited="#setEffect" strokeType="OUTSIDE" strokeWidth="0.0" text="vladut.2.vrinceanu@continental-corporation.com" BorderPane.alignment="CENTER_RIGHT">
+      <Text fx:id="dev" onMouseEntered="#setEffect" onMouseExited="#setEffect" strokeType="OUTSIDE" strokeWidth="0.0" text="vrinceanu.ioan.vladut@gmail.com" BorderPane.alignment="CENTER_RIGHT">
          <BorderPane.margin>
             <Insets bottom="10.0" right="40.0" />
          </BorderPane.margin>

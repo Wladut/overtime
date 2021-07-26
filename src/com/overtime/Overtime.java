@@ -130,8 +130,8 @@ public class Overtime implements Initializable {
                 foldersTreeView.getStylesheets().remove(0);
                 continentalImageIntermediate = new Image("/com/resources/overtimeblack.PNG");
                 imageContinental.setImage(continentalImageIntermediate);
-                imageContinental.setFitWidth(426);
-                imageContinental.setFitHeight(64);
+                imageContinental.setFitWidth(300);
+                imageContinental.setFitHeight(85);
                 imageContinental.blendModeProperty().setValue(BlendMode.DARKEN);
                 if (readConfig().contains(REGISTER_TIME_FLAG)) {
                     writeConfig(DAY_FLAG + " " + REGISTER_TIME_FLAG);
