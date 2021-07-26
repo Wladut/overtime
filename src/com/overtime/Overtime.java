@@ -100,7 +100,7 @@ public class Overtime implements Initializable {
     public void nightMode() {
         try {
             if (borderPane.styleProperty().toString().contains("F5F1F0")) {
-                continentalImageIntermediate = new Image("/com/resources/ContinentalOrange.JPG");
+                continentalImageIntermediate = new Image("/com/resources/overtimeorange.PNG");
                 imageContinental.setImage(continentalImageIntermediate);
                 imageContinental.setFitWidth(300);
                 imageContinental.setFitHeight(85);
@@ -128,7 +128,7 @@ public class Overtime implements Initializable {
                 labelOvertime.setStyle("-fx-fill: black");
                 radioButton.setStyle("-fx-text-fill: black");
                 foldersTreeView.getStylesheets().remove(0);
-                continentalImageIntermediate = new Image("/com/resources/ContinentalBlack.JPG");
+                continentalImageIntermediate = new Image("/com/resources/overtimeblack.PNG");
                 imageContinental.setImage(continentalImageIntermediate);
                 imageContinental.setFitWidth(426);
                 imageContinental.setFitHeight(64);
