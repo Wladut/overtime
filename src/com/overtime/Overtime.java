@@ -65,6 +65,13 @@ public class Overtime implements Initializable {
                 sendEmail = true;
             }
         } catch (IOException ignored) {
+            File config = new File("config.ini");
+            try {
+                config.createNewFile();
+                writeConfig("day");
+            } catch (IOException e) {
+
+            }
         }
     }
 
