@@ -6,8 +6,6 @@
  */
 
 module overtime {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires poi;
     requires java.desktop;
 
