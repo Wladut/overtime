@@ -3,7 +3,6 @@ package com.overtime;
 import javafx.application.Platform;
 import java.awt.*;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
