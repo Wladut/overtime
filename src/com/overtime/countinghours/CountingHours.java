@@ -1,4 +1,6 @@
-package com.overtime;
+package com.overtime.countinghours;
+
+import com.overtime.createtxt.RegisterClosingTimeAsTxt;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,10 +17,10 @@ import java.time.LocalTime;
  */
 
 public class CountingHours extends Thread {
-    boolean overtimeFlag = false;
-    String writeMessageToTxt;
-    int hours;
-    String minutesString;
+    public boolean overtimeFlag = false;
+    public String writeMessageToTxt;
+    public int hours;
+    public String minutesString;
     @Override
     public void run() {
         while (true){

@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="919.0" style="-fx-background-color: #F5F1F0; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.overtime.Overtime">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="919.0" style="-fx-background-color: #F5F1F0; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.overtime.controller.OvertimeController">
    <top>
       <VBox BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -24,7 +24,7 @@
                <children>
                   <ImageView fx:id="sendEmailToggle" fitHeight="30.0" fitWidth="39.0" onMouseClicked="#activateRegisterTime" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../resources/not_send_email.png" />
+                        <Image url="@../../resources/not_send_email.png" />
                      </image>
                      <HBox.margin>
                         <Insets right="15.0" />
@@ -32,12 +32,12 @@
                   </ImageView>
                   <ImageView fx:id="tray" fitHeight="30.0" fitWidth="39.0" onMouseClicked="#tray" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../resources/tray.png" />
+                        <Image url="@../../resources/tray.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="minimize" fitHeight="24.0" fitWidth="30.0" onMouseClicked="#resize" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../resources/minimize.png" />
+                        <Image url="@../../resources/minimize.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="15.0" />
@@ -45,7 +45,7 @@
                   </ImageView>
                   <ImageView fx:id="exit" fitHeight="26.0" fitWidth="35.0" onMouseClicked="#exit" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../resources/exit.png" />
+                        <Image url="@../../resources/exit.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="15.0" right="30.0" />
@@ -64,7 +64,7 @@
                            <children>
                               <ImageView fx:id="icon" fitHeight="38.0" fitWidth="32.0" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/Time.png" />
+                                    <Image url="@../../resources/Time.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets right="10.0" top="10.0" />
@@ -89,12 +89,12 @@
                                     <SepiaTone level="0.01" />
                                  </effect>
                                  <image>
-                                    <Image url="@../resources/overtimeblack.PNG" />
+                                    <Image url="@../../resources/overtimeblack.PNG" />
                                  </image>
                               </ImageView>
                               <ImageView fx:id="radioButton" accessibleRole="BUTTON" fitHeight="32.0" fitWidth="42.0" onMouseClicked="#nightMode" onMouseEntered="#setEffect" onMouseExited="#setEffect" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/night.png" />
+                                    <Image url="@../../resources/night.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="40.0" top="5.0" />

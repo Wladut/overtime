@@ -1,5 +1,8 @@
-package com.overtime;
+package com.overtime.tray;
 
+import com.overtime.Overtime;
+import com.overtime.excelwriter.WritingExcelOvertimeStatus;
+import com.overtime.controller.OvertimeController;
 import javafx.application.Platform;
 import java.awt.*;
 import java.io.File;
@@ -21,7 +24,7 @@ import javax.swing.*;
 public class SysTray {
     static TrayIcon trayIcon;
 
-    SysTray(){
+    public SysTray(){
         show();
     }
 
@@ -48,22 +51,22 @@ public class SysTray {
 
         open.addActionListener(actionEvent -> {
             Platform.runLater(() ->{
-                Main.stage.setOpacity(1);
-                Main.stage.requestFocus();
+                Overtime.stage.setOpacity(1);
+                Overtime.stage.requestFocus();
             });
         });
 
         about.addActionListener(actionEvent -> {
             JOptionPane.showMessageDialog(null,
-                    "Overtime tracking\nAuthor: vladut.2.vrinceanu@continental-corporation.com");
+                    "Overtime tracking\nAuthor: vrinceanu.ioan.vladut@gmail.com");
         });
 
         exit.addActionListener(actionEvent -> {
-            if (Main.countingHours.overtimeFlag && Overtime.sendEmail) {
+            if (Overtime.countingHours.overtimeFlag && OvertimeController.sendEmail) {
                     //Get overtime
-                    WritingExcelOvertimeStatus writingExcelOvertimeStatus = new WritingExcelOvertimeStatus(Main.path);
+                    WritingExcelOvertimeStatus writingExcelOvertimeStatus = new WritingExcelOvertimeStatus(Overtime.path);
                     double lastOverallValue = writingExcelOvertimeStatus.lastOverallValue();
-                    double actualOvertime = Double.parseDouble(Main.countingHours.hours + "." + Main.countingHours.minutesString);
+                    double actualOvertime = Double.parseDouble(Overtime.countingHours.hours + "." + Overtime.countingHours.minutesString);
                     double overall = actualOvertime + lastOverallValue;
                     writingExcelOvertimeStatus.writeLine(actualOvertime, overall);
                     //Send email
@@ -72,7 +75,7 @@ public class SysTray {
                         sendEmailVbaScript.delete();
                     }
                     try {
-                        String emailMessage = Main.countingHours.writeMessageToTxt + "\n\n" + "Overall:" + overall;
+                        String emailMessage = Overtime.countingHours.writeMessageToTxt + "\n\n" + "Overall:" + overall;
                         String[] emailMessageList = emailMessage.split("\n");
                         emailMessage = "";
                         for(String string : emailMessageList){
@@ -97,7 +100,7 @@ public class SysTray {
                                 "    Set objMail = olApp.CreateItem(olMailItem)\n" +
                                 "    \n" +
                                 "    With objMail\n" +
-                                "        .To = \"" + Main.email + "\"\n" +
+                                "        .To = \"" + Overtime.email + "\"\n" +
                                 "        .Subject = \"Status Overtime\"\n" +
                                 "        .Body = \"" + emailMessage + "\"\n" +
                                 "        .Display\n" +

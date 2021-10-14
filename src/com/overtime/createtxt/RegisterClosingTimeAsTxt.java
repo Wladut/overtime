@@ -1,4 +1,4 @@
-package com.overtime;
+package com.overtime.createtxt;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -19,7 +19,7 @@ import java.util.Scanner;
     - used in Main & in CountingHours
  */
 
-class RegisterClosingTimeAsTxt {
+public class RegisterClosingTimeAsTxt {
 
     public static LocalTime closingTime;
     public static LocalTime openTime;
@@ -28,7 +28,7 @@ class RegisterClosingTimeAsTxt {
     public static File txtFile;
     private LocalDate localDate = LocalDateTime.now().toLocalDate();
 
-    RegisterClosingTimeAsTxt(String path){
+    public RegisterClosingTimeAsTxt(String path){
         String rootFolderPath = path + "\\overtime";
         File folderStructurePath = new File(rootFolderPath);
         File txtFilePath = new File(rootFolderPath + "\\" +
@@ -42,7 +42,7 @@ class RegisterClosingTimeAsTxt {
         }
     }
 
-    static LocalTime getClosingTime() {
+    public static LocalTime getClosingTime() {
         if(closingTime == null){
             try {
                 Scanner scanner = new Scanner(txtFile);

@@ -1,4 +1,4 @@
-package com.overtime;
+package com.overtime.excelwriter;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -29,7 +29,7 @@ public class WritingExcelOvertimeStatus {
     private File file;
     private int lastRowNumber;
 
-    WritingExcelOvertimeStatus(String path) {
+    public WritingExcelOvertimeStatus(String path) {
         String fullPathWithFileNameIncluded = path + FILE_NAME;
         file = new File(fullPathWithFileNameIncluded);
         System.out.println(fullPathWithFileNameIncluded);
@@ -51,7 +51,7 @@ public class WritingExcelOvertimeStatus {
         lastRowNumber();
     }
 
-    double lastOverallValue(){
+    public double lastOverallValue(){
         if(lastRowNumber == 0 || lastRowNumber == 5){
             return 0;
         }
@@ -62,7 +62,7 @@ public class WritingExcelOvertimeStatus {
         return 0;
     }
 
-    boolean writeLine(double overtime, double overall){
+    public boolean writeLine(double overtime, double overall){
         LocalDate localDate = LocalDateTime.now().toLocalDate();
         String dateToWrite = localDate.format(DateTimeFormatter.ofPattern("dd.MM.YY"));
         int month = localDate.getMonthValue();
